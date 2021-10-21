@@ -62,6 +62,7 @@ add_library(core SHARED
     traci/VehicleController.cc
     traci/VehicleMobility.cc
     traci/VehicleType.cc
+        plugins/InterfaceConnection.cpp
     utility/AsioScheduler.cc
     utility/AsioTask.cc
     utility/Channel.cc
@@ -183,3 +184,5 @@ if(NOT is_multi_config)
         PROGRAMS ${PROJECT_BINARY_DIR}/${CMAKE_CFG_INTDIR}/run_artery.sh.install
         DESTINATION ${CMAKE_INSTALL_BINDIR} RENAME run_artery.sh)
 endif()
+
+#add_subdirectory(plugins)
